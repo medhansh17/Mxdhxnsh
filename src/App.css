@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.six-caps-regular {
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: #121212;
   color: white;
+  height: 200vh;
+  background: url("../src/Components/grain.webp");
+}
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.App-link {
-  color: #61dafb;
+.heroTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.primaryTitle {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.primaryTitle span {
+  display: inline-block;
+  font-size: calc(1rem + 21.15vw);
+  line-height: calc(1rem + 20.5vw);
+  height: fit-content;
+  transition: all 0.25s ease-in-out;
+  transform-origin: bottom;
+}
+
+.primaryTitle span:hover {
+  transform: scale(1, 1.2);
+}
+.titleDesc {
+  margin: 0 auto;
+  font-size: calc(0.5rem + 0.62vw);
+  color: gray;
+  font-weight: 700;
+  width: 80%;
+  text-align: center;
+  height: 100%;
+}
+.heroFooter {
+  position: absolute;
+  top: 90%;
+  height: 10%;
+  width: 100%;
+}
+
+.heroFooter span {
+  font-size: calc(0.5rem + 0.42vw);
+  margin-left: 5%;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
 }
