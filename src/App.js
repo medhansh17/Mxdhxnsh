@@ -1,35 +1,22 @@
 import "./App.css";
 import { Cursor } from "react-creative-cursor";
 import Navbar from "./Components/navbar/navbar.component";
+import Hero from "./Components/hero/hero.component";
+import About from "./Components/about/about.component";
 import "react-creative-cursor/dist/styles.css";
+import { Fragment } from "react";
 function App() {
+  const hasMouse = window.matchMedia("(pointer:fine)").matches;
+
   return (
-    <div className="Hero">
-      <Cursor isGelly={true} cursorBackgrounColor="purple" />
-      <Navbar />
-      <div className="heroTitle">
-        <div className="primaryTitle six-caps-regular">
-          <span className="box">M</span>
-          <span>E</span>
-          <span>D</span>
-          <span>H</span>
-          <span>A</span>
-          <span>N</span>
-          <span>S</span>
-          <span>H</span>
-        </div>
-        <div className="titleDesc">
-          <p>
-            HEY, I AM A FRONT-END WEB DEVELOPER SKILLED AT CRAFTING DIGITAL
-            EXPERIENCES THAT ARE AESTHETIC, EFFECTIVE, AND PURELY ENGAGING FOR
-            USERS.
-          </p>
-        </div>
+    <Fragment>
+      <div className="hero">
+        {hasMouse && <Cursor isGelly={true} cursorBackgrounColor="purple" />}
+        <Navbar />
+        <Hero />
       </div>
-      <div className="heroFooter">
-        <span>Scroll to Explore</span>
-      </div>
-    </div>
+      <About />
+    </Fragment>
   );
 }
 
