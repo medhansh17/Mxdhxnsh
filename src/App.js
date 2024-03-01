@@ -10,6 +10,10 @@ function App() {
 
   return (
     <Fragment>
+      <div className="rounded one"></div>
+      <div className="rounded two"></div>
+      <div className="rounded three"></div>
+      <div className="rounded four"></div>
       <div className="hero">
         {hasMouse && <Cursor isGelly={true} cursorBackgrounColor="purple" />}
         <Navbar />
