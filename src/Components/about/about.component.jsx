@@ -6,7 +6,7 @@ const About = () => {
       <h1 id="about" className="poppins-regular">
         About Me
       </h1>
-      <div id="aboutDesc">
+      <div id="aboutDesc" className="montserrat-font">
         Hey there! I'm Medhansh Jain, a passionate{" "}
         <span className="underline">front-end</span> web developer delving into
         the dynamic realm of backend technologies. Crafting visually appealing

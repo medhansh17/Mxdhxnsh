@@ -1,10 +1,10 @@
 import { Fragment, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "./hero.styles.css";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);
-
+  const { scrollYProgress } = useScroll();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -35,73 +35,76 @@ const Hero = () => {
     initial: { opacity: 0, scaleY: 0 },
     animate: { opacity: 1, scaleY: 1 },
   };
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7 ]);
 
   return (
     <Fragment>
-      <div className="heroTitle">
-        <motion.div
-          variants={myVars}
-          initial="initial"
-          animate="animate"
-          className="primaryTitle six-caps-regular"
-        >
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+      <motion.div style={{ scale: scale }} className="heroContainer">
+        <div className="heroTitle">
+          <motion.div
+            variants={myVars}
+            initial="initial"
+            animate="animate"
+            className="primaryTitle six-caps-regular"
           >
-            M
-          </motion.span>
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
-          >
-            E
-          </motion.span>
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
-          >
-            D
-          </motion.span>
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
-          >
-            H
-          </motion.span>
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
-          >
-            A
-          </motion.span>
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
-          >
-            N
-          </motion.span>
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
-          >
-            S
-          </motion.span>
-          <motion.span
-            variants={letterVars}
-            whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
-          >
-            H
-          </motion.span>
-        </motion.div>
-        <div className="titleDesc">
-          <p>
-            HEY, I AM A FRONT-END WEB DEVELOPER SKILLED AT CRAFTING DIGITAL
-            EXPERIENCES THAT ARE AESTHETIC, EFFECTIVE, AND PURELY ENGAGING FOR
-            USERS.
-          </p>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              M
+            </motion.span>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              E
+            </motion.span>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              D
+            </motion.span>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              H
+            </motion.span>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              A
+            </motion.span>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              N
+            </motion.span>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              S
+            </motion.span>
+            <motion.span
+              variants={letterVars}
+              whileHover={{ scaleY: 1.2, transition: { duration: 0.001 } }}
+            >
+              H
+            </motion.span>
+          </motion.div>
+          <div className="titleDesc">
+            <p>
+              HEY, I AM A FRONT-END WEB DEVELOPER SKILLED AT CRAFTING DIGITAL
+              EXPERIENCES THAT ARE AESTHETIC, EFFECTIVE, AND PURELY ENGAGING FOR
+              USERS.
+            </p>
+          </div>
         </div>
-      </div>
+      </motion.div>
       {isVisible && (
         <div className="heroFooter">
           <span>Scroll to Explore</span>

@@ -1,23 +1,32 @@
 .aboutSection {
   position: absolute;
   display: flex;
-  flex-direction: row;
+  row-gap: 20px;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   top: 115%;
-  height: fit-content;
+  height: 100%;
+  padding: 10px;
   width: 100vw;
+  /* From https://css.glass */
+  background: hsl(240, 10%, 5%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.3px);
+  -webkit-backdrop-filter: blur(12.3px);
 }
-
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 #about {
-  color: rgb(255, 255, 0, 0.9);
+  color: white;
   font-weight: 300;
-  transform: rotate(90deg);
   height: fit-content;
   width: fit-content;
   font-size: calc(2rem + 1vw);
-  text-shadow: 2px -3px rgb(253, 76, 253);
-  white-space: nowrap;
 }
 
 #aboutDesc {
@@ -47,7 +56,7 @@
 @media (max-width: 600px) {
   .aboutSection {
     flex-direction: column;
-    height: fit-content;
+    height: 100%;
     row-gap: 20px;
   }
   #about {
