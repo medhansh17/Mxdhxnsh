@@ -64,10 +64,10 @@
     top: 40%;
   }
   .primaryTitle span {
-    font-size: calc(10rem + 0.5vw);
+    font-size: calc(9.5rem + 0.5vw);
   }
   .titleDesc {
-    margin-top: 30px;
+    margin-top: 15px;
     width: 80vw;
     font-size: calc(1rem);
     font-weight: 400;

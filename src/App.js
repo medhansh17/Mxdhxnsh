@@ -2,7 +2,7 @@ import "./App.css";
 import { Cursor } from "react-creative-cursor";
 import Navbar from "./Components/navbar/navbar.component";
 import Hero from "./Components/hero/hero.component";
-import About from "./Components/about/about.component";
+import Showcase from "./Components/showcase/showcase.component";
 import "react-creative-cursor/dist/styles.css";
 import { Fragment } from "react";
 
@@ -11,10 +11,10 @@ function App() {
 
   return (
     <Fragment>
-      <div className="noise"></div>
       <div className="background">
-        <div className="rounded one"></div>
-        <div className="rounded two"></div>
+        <div className="noise"></div>
+          <div className="rounded one"></div>
+          <div className="rounded two"></div>
         <div className="rounded three"></div>
         <div className="rounded four"></div>
       </div>
@@ -22,8 +22,8 @@ function App() {
         {hasMouse && <Cursor isGelly={true} cursorBackgrounColor="purple" />}
         <Navbar />
         <Hero />
-      </div>
-      <About />
+      </div>  
+      <Showcase />
     </Fragment>
   );
 }

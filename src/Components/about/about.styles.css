@@ -1,19 +1,14 @@
 .aboutSection {
-  position: absolute;
+  position: relative;
   display: flex;
   row-gap: 20px;
   flex-direction: column;
   align-items: center;
-  top: 115%;
-  height: 100%;
-  padding: 10px;
+  height: fit-content;
+  /* padding: 10px; */
   width: 100vw;
-  /* From https://css.glass */
-  background: hsl(240, 10%, 5%);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.3px);
-  -webkit-backdrop-filter: blur(12.3px);
+  top: 40%;
+  transform: translateY(-40%);
 }
 .montserrat-font {
   font-family: "Montserrat", sans-serif;
@@ -23,46 +18,44 @@
 }
 #about {
   color: white;
-  font-weight: 300;
   height: fit-content;
   width: fit-content;
-  font-size: calc(2rem + 1vw);
+  font-size: calc(3.5rem + 1vw);
+  background-image: linear-gradient(to right, #553c9a, #ac86d2);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-
+#about:hover {
+}
 #aboutDesc {
-  width: 80%;
+  width: 60%;
   height: fit-content;
   font-size: calc(1rem + 0.82vw);
   text-align: center;
-  color: gray;
-  margin-right: 5%;
+  color: rgb(145, 136, 136);
+  font-weight: 300;
+  line-height: 140%;
 }
-
-.underline {
-  position: relative;
+#connect {
+  color: #ac86d2;
+  font-weight: 200;
+  /* font-style: italic; */
 }
-
-.underline::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  border-top: 4px solid rgb(253, 97, 253);
-  left: 0;
-  bottom: -7px;
-  border-radius: 45%;
-  height: 10px;
+#connect:hover {
+  text-decoration: line-through;
+  cursor: pointer;
 }
-
 @media (max-width: 600px) {
   .aboutSection {
-    flex-direction: column;
-    height: 100%;
-    row-gap: 20px;
+    row-gap: 10px;
   }
   #about {
-    transform: rotate(0deg);
+    font-size: calc(3rem + 1vw);
   }
   #aboutDesc {
-    margin-right: 0;
+    font-weight: 300;
+    width: 80vw;
   }
 }
