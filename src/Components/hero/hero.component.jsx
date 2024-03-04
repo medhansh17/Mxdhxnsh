@@ -35,11 +35,11 @@ const Hero = () => {
     initial: { opacity: 0, scaleY: 0 },
     animate: { opacity: 1, scaleY: 1 },
   };
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7 ]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
 
   return (
     <Fragment>
-      <motion.div style={{ scale: scale }} className="heroContainer">
+      <motion.div style={{ scale: scale }} className="heroContainer" id="hero">
         <div className="heroTitle">
           <motion.div
             variants={myVars}

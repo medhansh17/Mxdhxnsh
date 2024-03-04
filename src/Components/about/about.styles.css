@@ -27,7 +27,9 @@
   background-clip: text;
   -webkit-background-clip: text;
 }
-#about:hover {
+
+.mask {
+  overflow: hidden;
 }
 #aboutDesc {
   width: 60%;
