@@ -5,7 +5,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  will-change: scale;
 }
 
 .heroTitle {
@@ -66,6 +65,7 @@
   }
   .primaryTitle span {
     font-size: calc(9.5rem + 0.5vw);
+    line-height: calc(9.5rem + 0.5vw);
   }
   .titleDesc {
     margin-top: 15px;

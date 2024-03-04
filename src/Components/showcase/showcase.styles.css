@@ -9,21 +9,22 @@
   position: absolute;
   top: 115%;
   box-sizing: border-box;
+  overflow: hidden;
   /* box-shadow: 0 0 3px rgb(74, 57, 254); */
 }
 .rounded {
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(180px);
   position: absolute;
   z-index: -1;
 }
 .showcaseOne {
-  height: 270px;
-  width: 270px;
-  top: 55%;
-  left: 15%;
+  height: 670px;
+  width: 670px;
+  top: 20%;
+  left: 2%;
   opacity: 0.7;
   background-image: conic-gradient(
     #553c9a 0%,
@@ -35,17 +36,16 @@
   );
 }
 .showcaseTwo {
-  top: 30%;
-  left: -160px;
-  opacity: 0;
-  background-image: conic-gradient(
-    #553c9a 0%,
-    #553c9a 33%,
-    #ee4b2b 33%,
-    #ee4b2b 66%,
-    #00c2cb 66%,
-    #00c2cb 99%
+  top: -10%;
+  left: 90%;
+  opacity: 0.7;
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #fc1414 99%,
+    #f81f1f 100%
   );
+  filter: brightness(1.2) blur(120px);
 }
 
 @media (max-width: 600px) {
